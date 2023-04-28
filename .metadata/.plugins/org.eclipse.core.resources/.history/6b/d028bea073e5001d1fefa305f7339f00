@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+<%
+	String select = request.getParameter("select");
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h2>선택하신 앨범 정보</h2>
+	<hr>
+	<p>
+		
+		
+		
+		
+	</p>
+	<hr>
+	<% if(select=="2"){ %>
+			222222
+	<% } %>
+		ddd
+
+
+</body>
+</html>
