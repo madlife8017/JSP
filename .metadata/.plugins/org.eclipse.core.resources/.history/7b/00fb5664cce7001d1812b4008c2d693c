@@ -1,0 +1,32 @@
+<%@page import="java.util.Arrays"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+    <%
+    
+    /*
+    -세션에 저장한 데이터는 브라우저 창이 종료될때까지, 혹은 세션의 
+    유효기간이 만료되기 전까지 웹 어플리케이션의 모든 jsp 파일에서 사용이 가능합니다.
+    
+    -세션에 저장된 데이터르 가져오려면 session 객체의 메서드
+    getAtrriubet()를 사용하며, 매개값으로 가져올 세션 데이터의 이름을 적습니다.
+    */
+    //ㅎget Attribute의 리턴 타입은 object라 string으로 갖에 형변환 ㄱㄱ
+    
+    String nick = (String)session.getAttribute("nickname");
+    String[] hobbies = (String[]) session.getAttribute("hobbies");
+    out.print(nick+"<br>");
+    out.print(Arrays.toString(hobbies)+"<br>");
+    out.print("-------------------------------<br>");
+    
+    %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

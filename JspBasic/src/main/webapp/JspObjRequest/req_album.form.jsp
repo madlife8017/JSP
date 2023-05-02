@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form action="req_album.jsp">
-		<table border="1" width="500" height="300">
+		<table border="1" width="500" heigkht="300">
 			<tr>
 				<td></td>
 				<td>앨범 커버</td>
