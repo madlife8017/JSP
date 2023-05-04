@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<form action="/JspBasic/basic">
+	<form action="/JspBasic/basic" method="post">
 		#아이디 : <input  type="text" name="account"><br>
 		#비밀번호 : <input  type="password" name="password"><br>
 		#이름 : <input  type="text" name="name"><br>
