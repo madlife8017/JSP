@@ -3,18 +3,17 @@
     pageEncoding="UTF-8"%>
     
     <%
-    
-    	User user = new User(				
-    			
+    	User user = new User(
     				request.getParameter("id"),
     				request.getParameter("pw"),
     				request.getParameter("name"),
-    				request.getParameter("email")   			
-    			
+    				request.getParameter("email")
     			);
-   		session.setAttribute("member", user);    	
     
+    	session.setAttribute("member", user);
     %>
+    
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +22,19 @@
 </head>
 <body>
 
-	<a href="el_obj3.jsp"> el로 세션내의 객체의 값을 표현하기</a>
+	<a href="el_obj3.jsp">el로 세션 내의 객체의 값을 표현하기</a>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

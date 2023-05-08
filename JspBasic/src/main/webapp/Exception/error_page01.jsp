@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page errorPage="error_page02.jsp" %>
+<%@ page errorPage="error_page02.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<%=request.getParameter("id").toLowerCase() %>
+	<%= request.getParameter("id").toLowerCase() %>
 
 </body>
 </html>

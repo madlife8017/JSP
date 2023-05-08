@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<a href="gh.jsp">404에러유발</a>
+	<a href="hello.jsp">404 에러 유발!</a>
 
 </body>
 </html>

@@ -71,22 +71,22 @@ public class UserDAO {
 		}
 		
 	}
-	
+
 	public int userCheck(String id, String pw) {
-		int check =0;
-		String sql = "SELECT user_pw FROM my_user WHERE user_id= ?";
+		int check = 0;
+		String sql = "SELECT user_pw FROM my_user "
+					+ "WHERE user_id=?";
 		try(Connection conn = ds.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql)) {
-			pstmt.setString(1, id);			
+			pstmt.setString(1, id);
 			ResultSet rs = pstmt.executeQuery();
-			if(rs.next()) {								
-				if(rs.getString("user_pw").equals(pw)) {
-					check= 1;
-				}
-				else check= 0;				
-			}else {
-				check= -1;
-			}			
+			
+			if(rs.next()) {
+				String dbPw = rs.getString("user_pw");
+				if(dbPw.equals(pw)) check = 1;
+				else check = 0;
+			} else check = -1;
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -95,26 +95,71 @@ public class UserDAO {
 
 	public UserVO getUserInfo(String id) {
 		UserVO user = null;
-		String sql ="SELECT * FROM my_user WHERE user_id = '"+id+"'";
+		String sql = "SELECT * FROM my_user "
+				+ "WHERE user_id='" + id + "'";
 		try(Connection conn = ds.getConnection();
 				PreparedStatement pstmt = conn.prepareStatement(sql);
-				ResultSet rs = pstmt.executeQuery()){
+				ResultSet rs = pstmt.executeQuery()) {
 			if(rs.next()) {
 				user = new UserVO(
-						rs.getString("user_id"),
-						rs.getString("user_pw"),
-						rs.getString("user_name"),
-						rs.getString("user_email"),
-						rs.getString("user_address")						
-						);				
-			}			
-		}catch (Exception e) {
-			e.printStackTrace();
+							rs.getString("user_id"),
+							rs.getString("user_pw"),
+							rs.getString("user_name"),
+							rs.getString("user_email"),
+							rs.getString("user_address")
+						);
+			}
 			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}	
-		
 		return user;
-	}	
+	}
+
+	public void changePassword(String id, String newPw) {
+		String sql = "UPDATE my_user "
+				+ "SET user_pw=? WHERE user_id=?";
+		try(Connection conn = ds.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, newPw);
+			pstmt.setString(2, id);
+			pstmt.executeUpdate();		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void updateUser(UserVO vo) {
+		String sql = "UPDATE my_user "
+				+ "SET user_name=?, user_email=?, user_address=? "
+				+ "WHERE user_id=?";
+		try(Connection conn = ds.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, vo.getUserName());
+			pstmt.setString(2, vo.getUserEmail());
+			pstmt.setString(3, vo.getUserAddress());
+			pstmt.setString(4, vo.getUserId());
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void deleteUser(String id) {
+		String sql = "DELETE FROM my_user WHERE user_id=?";
+		try(Connection conn = ds.getConnection();
+				PreparedStatement pstmt = conn.prepareStatement(sql)) {
+			pstmt.setString(1, id);
+			pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
+	
 	
 }
 

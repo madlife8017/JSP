@@ -107,3 +107,21 @@
 5월 04, 2023 17:14:53.338 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
 5월 04, 2023 17:30:04.235 [7772:10668:0504/173004.234:ERROR:device_event_log_impl.cc(222)] [17:30:04.235] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
 5월 04, 2023 17:43:34.962 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+
+5월 08, 2023 10:10:45.761 NEW SESSION
+5월 08, 2023 10:10:45.761 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 10:14:15.485 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 10:14:45.795 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 10:53:42.349 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 11:00:27.617 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 08, 2023 11:25:12.753 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+5월 08, 2023 11:25:23.905 [libprotobuf ERROR ..\..\third_party\protobuf\src\google\protobuf\message_lite.cc:133] Can't parse message of type "safe_browsing.ClientDownloadRequest" because it is missing required fields: (cannot determine missing fields for lite message)
+
+5월 08, 2023 11:32:17.506 NEW SESSION
+5월 08, 2023 11:32:17.506 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 14:27:00.440 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 14:27:31.346 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 14:31:34.662 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 17:55:25.757 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 18:10:13.135 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+5월 08, 2023 18:15:28.47 INFO: Created TensorFlow Lite XNNPACK delegate for CPU.

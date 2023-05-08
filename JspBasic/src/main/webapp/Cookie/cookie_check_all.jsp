@@ -2,15 +2,17 @@
     pageEncoding="UTF-8"%>
     
     <%
-    Cookie [] cookies = request.getCookies();
-    if(cookies!=null){
-    	for(Cookie c : cookies){
-    		out.print(c.getName() + ":" +c.getValue()+"<br>");
-    		out.print("-------------------------------------<br>");
+    	Cookie[] cookies = request.getCookies();
+    	if(cookies != null) {
+    		for(Cookie c : cookies) {
+    			out.print(c.getName() + " : " + c.getValue() + "<br>");
+    			out.print("---------------------------------------<br>");
+    		}
     	}
-    }
     
     %>
+    
+    
 <!DOCTYPE html>
 <html>
 <head>

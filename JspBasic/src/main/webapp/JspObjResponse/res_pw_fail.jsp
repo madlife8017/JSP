@@ -7,8 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>비밀번호가 틀렸습니다!</h2>
-<a href="res_login_form.jsp">처음으로 돌아가기</a>
+
+	<h2>비밀번호가 틀렸습니다.</h2>
+	<a href="res_login_form.jsp">로그인 페이지로</a>
 
 </body>
 </html>

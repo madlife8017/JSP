@@ -25,7 +25,8 @@
   		String nick = (String) session.getAttribute("user_nick");
  
     %>
-    <%@ include file ="../Application/app_basic.jsp" %>
+    
+    <%@ include file="../Application/app_basic.jsp" %>
     
 <!DOCTYPE html>
 <html>
@@ -42,8 +43,7 @@
 	
 	<hr>
 	
-	<h3>요청된 횟수 : <%=count%> 회</h3>
-	
+	<h3>요청된 횟수: <%=count %>회</h3>
 
 </body>
 </html>

@@ -1,7 +1,6 @@
 <%@page import="user.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,24 +10,48 @@
 <body>
 
 	<%
-		User user = (User)session.getAttribute("member");
+		User user = (User) session.getAttribute("member");
 	%>
 	
 	<p>
-		# 이름 : <%=user.getUserName() %><br>
-		# 아이디 : <%=user.getUserId() %><br>
-		# 이메일 : <%=user.getUserEmail() %><br>
-		# 비밀번호 : <%=user.getUserPw() %><br>
+		# 이름: <%=user.getUserName() %> <br>
+		# 아이디: <%=user.getUserId() %> <br>
+		# 이메일: <%=user.getUserEmail() %> <br>
+		# 비밀번호: <%=user.getUserPw() %>
 	</p>
 	
 	<hr>
+	
 	<p>
-		# 이름 : ${sessionScope.member.userName}<br>
-		# 아이디 : ${member.userId}<br>
-		# 이메일 : ${member.userEmail}<br>
-		# 비밀번호 : ${member.userPw}<br>
-		
+		# 이름: ${sessionScope.member.userName} <br>
+		# 아이디: ${member.userId} <br>
+		# 이메일: ${member.userEmail} <br>
+		# 비밀번호: ${member.userPw}
 	</p>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,13 +19,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<p>
-		<%=id %><br>
-		<%=pw %><br>
-		<%=gender %><br>
-		<%=Arrays.toString(hobby) %><br>
-		<%=region %><br>
-		<%=introduce %><br>
+		# ID: <%=id %> <br>
+		# PW: <%=pw %> <br>
+		# 성별: <%=gender %> <br>
+		# 취미: <%=Arrays.toString(hobby) %> <br>
+		# 지역: <%=region %> <br>
+		# 자기소개: <%=introduce %>
 	</p>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

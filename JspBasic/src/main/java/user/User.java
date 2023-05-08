@@ -7,8 +7,7 @@ public class User {
 	private String userName;
 	private String userEmail;
 	
-	public User() {		
-	}
+	public User() {}
 
 	public User(String userId, String userPw, String userName, String userEmail) {
 		super();
