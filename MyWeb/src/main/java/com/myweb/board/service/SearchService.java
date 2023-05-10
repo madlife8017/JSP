@@ -14,29 +14,46 @@ public class SearchService implements IBoardService {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		
+
 		String category = request.getParameter("category");
-		String search = request.getParameter("search");
-		List<BoardVO> list = BoardDAO.getInstance().searchBoard(category,search);
+		String keyword = request.getParameter("search");
+		List<BoardVO> list = BoardDAO.getInstance().searchBoard(keyword, category);
 		
-		if(list.size()==0) {			
+		if(list.size() == 0) {
 			response.setContentType("text/html; charset=UTF-8");
 			try {
 				PrintWriter out = response.getWriter();
 				String htmlCode = "<script>\r\n"
-						+ "				alert('검색결과에 따른 게시물이 없습니다..');\r\n"
-						+ "			location.href= '/MyWeb/list.board';\r\n"
+						+ "				alert('검색 결과에 따른 게시물이 없습니다.');\r\n"
+						+ "				location.href='/MyWeb/list.board';\r\n"
 						+ "				</script>";
-				
 				out.print(htmlCode);
 				out.flush();
-				return; //조회 결과가 없다면 request에 담지 않아도 됨 그래서 종료
+				return; //조회 결과가 없었다면 request에 데이터를 담지 않아도 되기 때문에 메서드를 강제 종료.
 				
 			} catch (IOException e) {
 				e.printStackTrace();
-			}
+			}		
 		}
 		
-		request.setAttribute("boardList",list);
+		request.setAttribute("boardList", list);
+		
+		
 	}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
